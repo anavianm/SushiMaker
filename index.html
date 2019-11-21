@@ -1,3 +1,18 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@mchoi06 
+Code Issues 0 Pull requests 0 Projects 0 Wiki Security Pulse Community
+API/index.html
+ mchoi06 Update index.html
+21cf037 8 days ago
+78 lines (75 sloc)  3.37 KB
+  
 <!doctype html>
 <html>
 <head>
@@ -13,27 +28,44 @@
 <body>
 <script>
 	function get(){			
-var data = "title=Pork%20roast%20with%20green%20beans&ingredientList=3%20oz%20pork%20shoulder";
-
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
-	}
-});
-
-xhr.open("POST", "https://webknox-recipes.p.rapidapi.com/recipes/cuisine");
-xhr.setRequestHeader("x-rapidapi-host", "webknox-recipes.p.rapidapi.com");
-xhr.setRequestHeader("x-rapidapi-key", "7ddca20921mshdbcbac81046499ep1ab2dajsn2a6100028134");
-xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-
-xhr.send(data);
+		var ajaxRequest = new XMLHttpRequest();
+		ajaxRequest.onreadystatechange = function(){
+			if(ajaxRequest.readyState == 1){
+				console.log("Established server connection." + ajaxRequest.readyState + "status=" + ajaxRequest.status);
+			}
+			else if(ajaxRequest.readyState == 2){
+				console.log("Request received by server." + ajaxRequest.readyState + "status=" + ajaxRequest.status);
+			}
+			else if(ajaxRequest.readyState == 3){
+				console.log("Processing request." + ajaxRequest.readyState + "status=" + ajaxRequest.status);
+			}
+			else if(ajaxRequest.readyState == 4){
+				console.log("Done loading!" + ajaxRequest.readyState + "status=" + ajaxRequest.status);
+				if(ajaxRequest.status == 200){
+					console.log("It worked!");
+					var result = ajaxRequest.responseText;
+					var info = JSON.parse(result);
+					$('#display').append("<b>Requested url:</b> https://maps.googleapis.com/maps/api/geocode/json?address=1325+66th+Street,+Brooklyn,+NY&key=AIzaSyC9gjDs2-rhSSPh1BNO25RZwvWaaIbR7-c <br> <br>" + 
+								"<b>Formatted Address: </b>" + info["results"][0]["formatted_address"] + 
+							    "<br> <b>Neighborhood: </b>" + info["results"][0]["address_components"][2]["long_name"] +
+							    "<br> <b>County: </b>" + info["results"][0]["address_components"][4]["long_name"] + "<br>");
+				}
+				else{
+					console.log("Status error: " + ajaxRequest.status);
+				}
+			$('#display').append("<br>");			}
+			console.log("Ready state changed!");
+			}
+		ajaxRequest.open("GET", "http://www.recipepuppy.com/api/?q=sushi", true);
+		ajaxRequest.withCredentials = false;
+		ajaxRequest.send();
 	};
 	$('display').ready(get());
 </script>
 <div id="display">
+	<h1>Using Google Maps' Geocode API</h1>
 </div>
+
+
 </body>
 </html>
