@@ -1,0 +1,17 @@
+body {
+    style="margin: 0 auto;
+    text-align:center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+    font-size: 4vw;
+}
+
+h2 {
+    font-size: 2.2vw;
+}
+
+p, ul {
+    font-size: 1.7vw;
+}

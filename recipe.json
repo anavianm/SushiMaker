@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Salmon Roll",
+        "ingredients": [
+            {
+                "quantity": "6 sheets",
+                "name": " sushi seaweed"
+            },
+            {
+                "quantity": "1 batch",
+                "name": " prepared sushi rice"
+            },
+            {
+                "quantity": "1/2 lb",
+                "name": " sushi-grade raw salmon"
+            },
+            {
+                "quantity": "4 oz",
+                "name": " cream cheese sliced into strips"
+            },
+            {
+                "quantity": "1",
+                "name": " avocado sliced"
+            },
+            {
+                "quantity": "1",
+                "name": " soy sauce for serving"
+            }
+
+        ],
+        "steps": [
+            "Place the seaweed on a bamboo mat, then cover the sheet of seaweed with an even layer of prepared sushi rice. ",
+            "Smooth gently with the rice paddle. ",
+            "Cut straight down through the filet, then cut that piece in half through the center so you have a small strip. ",
+            "Layer salmon, cream cheese, and avocado on the rice, and roll it up tightly. ",
+            "Slice with a sharp knife, and enjoy with soy sauce. "
+        ],
+        "imageURL": "https://www.fifteenspatulas.com/wp-content/uploads/2016/06/Homemade-Sushi-2-640x959.jpg",
+        "originalURL": "https://www.fifteenspatulas.com/homemade-sushi/"
+    }
+]
