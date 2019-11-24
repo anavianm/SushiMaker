@@ -4,6 +4,7 @@ var ingredients = "";
 var steps =  "";
 var ingredientsToSpeech = "";
 var stepsToSpeech = "";
+var image = "";
 
 document.addEventListener("DOMContentLoaded", () => {
     fetch('recipe.json')
@@ -20,26 +21,25 @@ function display(data) {
     console.log(data);
 
     // Store data
-    ingredients += "<div>";
     ingredients += "<ul>";
     for (x in data[0].ingredients) {
         ingredients += "<li>" + data[0].ingredients[x].quantity + data[0].ingredients[x].name;
         ingredientsToSpeech += data[0].ingredients[x].quantity + data[0].ingredients[x].name + ". ";
     }
-    ingredients += "</ul></div>";
+    ingredients += "</ul>";
 
-    steps += "<div>";
-    steps += "<ul>";
+    steps += "<ol>";
     for (x in data[0].steps) {
         steps += "<li>" + data[0].steps[x];
         stepsToSpeech += data[0].steps[x];
     }
-    steps += "</ul></div>";
+    steps += "</ol>";
 
     // Show data
     document.getElementById("recipeName").innerHTML = data[0].name;
-    document.getElementById("ingredients").innerHTML = ingredients;
-    document.getElementById("steps").innerHTML = steps;
+    document.getElementById("ingredientsData").innerHTML = ingredients;
+    document.getElementById("stepsData").innerHTML = steps;
+    document.getElementById("recipeImg").src = data[0].imageURL;
 
     // Create buttons to speech
     document.getElementById("ingredientsToSpeech").setAttribute('data-words', ingredientsToSpeech);
