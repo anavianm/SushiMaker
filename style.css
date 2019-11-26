@@ -9,10 +9,8 @@ body {
     margin-bottom: 100px;
     text-align: center;
     width: 1024px;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
-    /* background-color:#fff; */
 }
 
 .header {
@@ -35,7 +33,6 @@ button {
     background-image: none;
     padding: 6px 12px;
     font-size: 1.4rem;
-    /* border-radius: 3px; */
     border: 1px solid transparent;
     text-decoration: none;
     user-select: none;
