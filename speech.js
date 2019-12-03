@@ -5,6 +5,7 @@ var steps =  "";
 var ingredientsToSpeech = "";
 var stepsToSpeech = "";
 var image = "";
+var completed = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
     fetch('recipe.json')
@@ -62,4 +63,13 @@ function click(e) {
   
 [...document.querySelectorAll('button')].forEach(function(button) {
     button.onclick = click;
+    document.getElementById("heartButton").onclick = complete;
 });
+
+function complete(e) {
+    if (completed)  {
+        completed = 1;
+    } else if {
+        completed = 0;
+    }
+}
