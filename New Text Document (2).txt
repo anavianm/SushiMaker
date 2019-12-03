@@ -1,0 +1,4 @@
+ORG_URL=https://{yourOktaDomain}
+HOST_URL=http://localhost:3000
+CLIENT_ID=okta-application-client-id
+CLIENT_SECRET=okta-application-client-secret
