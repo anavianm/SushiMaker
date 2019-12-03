@@ -22,6 +22,40 @@ body {
 
 }
 
+.navbar {
+    width: 100%;
+    background-color: #000;
+    overflow: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #ffda08;
+}
+
+.navbar .item {
+    color: #fff;
+    float: left;
+    padding: 12px;
+    color: #fff;
+    font-size: 17px;
+    float: right;
+    padding-right: 20px;
+}
+
+.navbar .logo {
+    padding: 8px;
+    font-weight: 900;
+    font-size: 24px;
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    color: #fff;
+}
+
 button {
     display: inline-block;
     margin-bottom: 0;

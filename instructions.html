@@ -13,25 +13,32 @@
   </head>
 
   <body >
-    <div class="header">
-      <img class="smallImg" src="assets/images/Salmon-Avocado-Sushi-Roll.jpg" alt="Sushi image">
-      <h1 id="recipeName" style="margin-top: 5px;">Name</h1>
-      <div class="heartButton" id="heartButton" data-words="Here is your character name"><i class="fa fa-heart"></i> Complete</div>
-      <!-- <p id="description">Tried: <i class="fa fa-heart"></i></p> -->
+    <div class="navbar">
+      <a class="logo" href="index.html">🍣 SushiMaker</a>
+      <a class="item" href="user.html"><i class="fa fa-fw fa-user"></i> Login</a></a>
     </div>
-    <div class="container">
-      <div class=row>
-        <div class="image">
-          <img id="recipeImg" src="" alt="">
-        </div>
-        <div class="info">
-          <h2>Ingredients</h2>
-          <button id="ingredientsToSpeech" type="button" data-words="Ingredients"><i class="fa fa-play"></i> Speak Aloud Ingredients</button>
-          <div id="ingredientsData"></div>
-          <hr>
-          <h2>Steps</h2>
-          <button id="stepsToSpeech" type="button" data-words="Steps"><i class="fa fa-play"></i> Speak Aloud Steps</button>
-          <div id="stepsData"> </div>
+    
+    <div class="page" id="page">
+      <div class="header">
+        <img class="smallImg" src="assets/images/Salmon-Avocado-Sushi-Roll.jpg" alt="Sushi image">
+        <h1 id="recipeName" style="margin-top: 5px;">Name</h1>
+        <div class="heartButton" id="heartButton"><i class="fa fa-heart"></i> Complete</div>
+      </div>
+
+      <div class="container">
+        <div class=row>
+          <div class="image">
+            <img id="recipeImg" src="" alt="">
+          </div>
+          <div class="info">
+            <h2>Ingredients</h2>
+            <button id="ingredientsToSpeech" type="button" data-words="Ingredients"><i class="fa fa-play"></i> Speak Aloud Ingredients</button>
+            <div id="ingredientsData"></div>
+            <hr>
+            <h2>Steps</h2>
+            <button id="stepsToSpeech" type="button" data-words="Steps"><i class="fa fa-play"></i> Speak Aloud Steps</button>
+            <div id="stepsData"> </div>
+          </div>
         </div>
       </div>
     </div>

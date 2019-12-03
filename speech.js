@@ -6,9 +6,11 @@ var ingredientsToSpeech = "";
 var stepsToSpeech = "";
 var image = "";
 var completed = 0;
+var completedText = "";
+var page = "";
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('recipe.json')
+    fetch('recipe.json') 
     .then(d=>d.json())
     .then(data=>{
         console.log(data);
@@ -20,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function display(data) {
     console.log(data);
+    document.getElementById("page").style.visibility = 'visible';
 
     // Store data
     ingredients += "<ul>";
@@ -55,7 +58,22 @@ function speak(text) {
     utterance.rate = 0.75;
     speechSynthesis.speak(utterance);
 }
-  
+
+function complete(e) {
+    if (!completed)  {
+        completed = 1;
+        completedText = '<i class="fa fa-heart"></i>' + " Completed";
+        document.getElementById('heartButton').style.cssText = 'background-color:#000000; color:#ffffff;';
+        console.log(completed);
+    } else {
+        completed = 0;
+        completedText = '<i class="fa fa-heart"></i>' + " Complete";
+        document.getElementById('heartButton').style.cssText = 'background-color:#ffffff; color:#000000;';
+        console.log(completed);
+    } 
+    document.getElementById("heartButton").innerHTML = completedText;
+}
+
 function click(e) {
     var text = e.target.getAttribute('data-words');
     speak(text);
@@ -66,10 +84,3 @@ function click(e) {
     document.getElementById("heartButton").onclick = complete;
 });
 
-function complete(e) {
-    if (completed)  {
-        completed = 1;
-    } else if {
-        completed = 0;
-    }
-}
