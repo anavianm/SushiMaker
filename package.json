@@ -7,6 +7,9 @@
     "test": "eslint . ./bin/www",
     "start": "node ./bin/www"
   },
+  "keywords":{
+	  "node"
+  },
   "dependencies": {
     "@okta/oidc-middleware": "^0.1.2",
     "@okta/okta-sdk-nodejs": "^1.1.0",
