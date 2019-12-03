@@ -3,6 +3,7 @@ const express = require('express')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
+const morgan = require('morgan')
 const session = require('express-session')
 const { ExpressOIDC } = require('@okta/oidc-middleware')
 const bodyParser = require('body-parser');
@@ -15,7 +16,7 @@ const dashboardRouter = require('./routes/dashboard')
 const testRouter = require('./routes/test')
 const registrationRouter = require('./routes/register')
 const resetPassword = require('./routes/reset-password')
-const recipeRoutes = require('./routes/recipes')
+const recipesRoutes = require('./routes/recipes')
 
 mongoose.connect('mongodb+srv://mchoi06:oof@mchoi06-dvlp7.mongodb.net/Comp20Final?retryWrites=true&w=majority', 
 	{
@@ -38,13 +39,13 @@ const oidc = new ExpressOIDC({
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
 
-
+app.use(morgan('dev'));
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(morgan('dev'));
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());	
 

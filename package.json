@@ -7,9 +7,6 @@
     "test": "eslint . ./bin/www",
     "start": "node ./bin/www"
   },
-  "keywords":{
-	  "node"
-  },
   "dependencies": {
     "@okta/oidc-middleware": "^0.1.2",
     "@okta/okta-sdk-nodejs": "^1.1.0",
@@ -23,7 +20,7 @@
     "http-errors": "~1.6.3",
     "lodash": "^4.17.15",
     "mongoose": "^5.7.13",
-    "morgan": "~1.9.1",
+    "morgan": "^1.9.1",
     "nodemon": "^2.0.1"
   }
 }
