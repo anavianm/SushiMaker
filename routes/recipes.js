@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const Recipe = require('../models/recipe');
 const mongoose = require('mongoose');
 
-//const Recipe = require('./models/recipe');
+
 
 router.get('/', (req, res, next) => {
 	Recipe.find()

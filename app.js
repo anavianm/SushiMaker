@@ -76,6 +76,7 @@ app.use('/dashboard', oidc.ensureAuthenticated(), dashboardRouter)
 //app.use('/profile', oidc.ensureAuthenticated(), profileRouter)
 app.use('/test', oidc.ensureAuthenticated(), testRouter)
 app.use('/register', registrationRouter)
+app.use('/index', indexRouter)
 app.use('/reset-password', resetPassword)
 app.use('/recipes', recipesRoutes);
 app.get('/logout', (req, res) => {

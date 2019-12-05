@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
     .filter(({ details }) => details)
 
   res.render('dashboard', {
-    title: 'Dashboard',
+    title: 'SushiMaker',
     descriptionList,
     user: req.user,
   })
