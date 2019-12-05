@@ -1,38 +1,38 @@
-body {
-  padding: 0;
-  margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+navbar {
+    width: 100%;
+    background-color: #000;
+    overflow: auto;
 }
 
-a {
-/*  color: #000000;*/
+.navbar a {
+    text-decoration: none;
 }
 
-h1{
-/*    color: #000000;*/
+.navbar a:hover {
+    color: #ffda08;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #000;
-  color: white;
-  font-size: 17px;
-  width: 100%;
-  padding: 20px;
+.navbar .item {
+    color: #fff;
+    float: left;
+    padding: 12px;
+    color: #fff;
+    font-size: 17px;
+    float: right;
+    padding-right: 20px;
 }
 
-header > a {
-  color: #fff;
+.navbar .logo {
+    padding: 8px;
+    font-weight: 900;
+    font-size: 24px;
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    color: #fff;
 }
 
-/*
-header,
-main {
-  padding: 50px;
-}
-*/
 
 dt {
   padding: 4px 0;

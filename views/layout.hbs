@@ -5,20 +5,20 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <header>
+    <navbar>
       
-      <h1>{{title}}</h1>
+      <h1 class="logo">{{title}}</h1>
       {{#if user}}
         <a href="/test">
           Signed in as {{user.profile.firstName}} {{user.profile.lastName}}
         </a>
       {{/if}}
       {{#if user}}
-        <a href="/logout">Sign out</a>
+        <a class="item" href="/logout">Sign out</a>
       {{else}}
-        <a href="/login">Sign in</a>
+        <a  class="item" href="/login">Sign in</a>
       {{/if}}
-    </header>
+    </navbar>
     <main>
       {{{body}}}
     </main>
