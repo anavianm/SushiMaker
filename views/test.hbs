@@ -26,20 +26,24 @@
 
 <form method="post">
     <div id="hidden">
-        <input id ="likedR" type="submit" name="likedRecipe" value= "" />
+        <input id ="likedRecipe" name="likedRecipe" value= "" />
     </div>
     <div>
         <button type="submit">Liked This</button>
     </div>
 </form>
 
+
+
 <p id="liked">{{user.profile.likedRecipe}}</p>
+
 <!--
+    <form  method="post">
+        <input id ="likedRecipe" type="submit" name="likedRecipe" value= "" />
+    </form>
+-->
 
-<form  method="post">
-    <input id ="likedRecipe" type="submit" name="likedRecipe" value= "" />
-</form>
-
+<!--
 <form  method="post">
     <input id ="likedRecipe1" type="submit" name="likedRecipe" value= "" />
 </form>
@@ -53,10 +57,16 @@
     
     var current = document.getElementById('liked').innerHTML;
     console.log(current);
+    
+    var recipes = current.split(",");
+    
+    if(recipes.includes("cool")){
+        
+    }
     var update = current + "cool" +",";
-    document.getElementById('likedR').value = update;
+    document.getElementById('likedRecipe').value = update;
 
-    console.log(document.getElementById('likedR').value);
+    console.log(document.getElementById('likedRecipe').value);
 
     
 </script>
