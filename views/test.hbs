@@ -1,3 +1,7 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<!--
 <form method="post">
   {{#each fields}}
     <div>
@@ -14,5 +18,45 @@
     </div>
   {{/each}}
 
-  <button type="submit">Save</button>
+  
 </form>
+-->
+
+<!--<button onclick="post()">Liked</button>-->
+
+<form method="post">
+    <div id="hidden">
+        <input id ="likedR" type="submit" name="likedRecipe" value= "" />
+    </div>
+    <div>
+        <button type="submit">Liked This</button>
+    </div>
+</form>
+
+<p id="liked">{{user.profile.likedRecipe}}</p>
+<!--
+
+<form  method="post">
+    <input id ="likedRecipe" type="submit" name="likedRecipe" value= "" />
+</form>
+
+<form  method="post">
+    <input id ="likedRecipe1" type="submit" name="likedRecipe" value= "" />
+</form>
+-->
+
+
+
+<script type="text/javascript">
+    
+    $("#hidden").hide();
+    
+    var current = document.getElementById('liked').innerHTML;
+    console.log(current);
+    var update = current + "cool" +",";
+    document.getElementById('likedR').value = update;
+
+    console.log(document.getElementById('likedR').value);
+
+    
+</script>
