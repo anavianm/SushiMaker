@@ -5,11 +5,11 @@ body {
 }
 
 a {
-  color: #000000;
+/*  color: #000000;*/
 }
 
 h1{
-    color: #000000;
+/*    color: #000000;*/
 }
 
 header {
@@ -19,10 +19,12 @@ header {
   background-color: #000;
   color: white;
   font-size: 17px;
+  width: 100%;
+  padding: 20px;
 }
 
 header > a {
-  color: #ffda08;
+  color: #fff;
 }
 
 header,
