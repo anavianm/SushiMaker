@@ -1,0 +1,68 @@
+body{
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    background-color: #ffda08;
+}
+
+
+.navbar {
+    height: auto;
+    width: 100%;
+    background-color: #000;
+    overflow: auto;
+    text-decoration: none !important;
+}
+
+.navbar a {
+    text-decoration: none;
+    text-decoration-color: #fff;
+    
+}
+
+.navbar a:hover {
+    text-decoration: none;
+    color: #ffda08;
+}
+
+.navbar .item {
+    color: #fff;
+    float: left;
+    padding: 12px;
+    color: #fff;
+    font-size: 17px;
+    float: right;
+    padding-right: 20px;
+}
+
+.navbar .logo {
+    text-decoration: none !important;
+    padding: 8px;
+    font-weight: 900;
+    font-size: 24px;
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    color: #fff !important;
+    margin: 0;
+}
+
+.navbar .logo a {
+    color: #fff;
+}
+.header{
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+
+dt {
+  padding: 4px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+dd{
+    margin: 0 !important;
+    text-align: center;
+}
