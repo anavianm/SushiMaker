@@ -79,7 +79,7 @@ button:hover {
 }
 
 button:active {
-    background-color:#31ff08b9;
+    /* background-color:#31ff08b9; */
 }
 
 @media all and (max-width:30em) {
