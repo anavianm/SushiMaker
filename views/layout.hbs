@@ -5,7 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <navbar>
+    <div class="navbar">
       
       <h1 class="logo">{{title}}</h1>
       {{#if user}}
@@ -18,7 +18,8 @@
       {{else}}
         <a  class="item" href="/login">Sign in</a>
       {{/if}}
-    </navbar>
+      {{/if}}
+      </div>
     <main>
       {{{body}}}
     </main>
