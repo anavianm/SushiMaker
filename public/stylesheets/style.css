@@ -1,4 +1,7 @@
-
+body{
+    margin: 0;
+    background-color: #ffda08;
+}
 navbar {
     width: 100%;
     background-color: #000;
