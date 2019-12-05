@@ -71,6 +71,8 @@ button {
     text-decoration: none;
     user-select: none;
     font-size: 1.4vw;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 button:hover {
