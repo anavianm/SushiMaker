@@ -27,10 +27,12 @@ header > a {
   color: #fff;
 }
 
+/*
 header,
 main {
   padding: 50px;
 }
+*/
 
 dt {
   padding: 4px 0;
