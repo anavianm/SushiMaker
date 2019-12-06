@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/4764a23c80.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="navbar">
+      
+      <h1 class="logo"><a href="/index">🍣{{title}}</a></h1>
+      {{#if user}}
+        <a class="item" href="/logout">Sign out</a>
+      {{else}}
+        <a  class="item" href="/login">Sign in</a>
+      {{/if}}
+     {{#if user}}
+        <a class="item" href="/test"><i class="fa fa-fw fa-user"></i>
+          {{user.profile.firstName}}
+        </a>
+      {{/if}}
+    </div>
+    <div>
+      {{{body}}}
+    </div>
+  </body>
+</html>
