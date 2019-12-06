@@ -17,6 +17,7 @@ const testRouter = require('./routes/test')
 const registrationRouter = require('./routes/register')
 const resetPassword = require('./routes/reset-password')
 const recipesRoutes = require('./routes/recipes')
+const instructionRoutes = require('./routes/instructions')
 
 mongoose.connect('mongodb+srv://mchoi06:oof@mchoi06-dvlp7.mongodb.net/Comp20Final?retryWrites=true&w=majority', 
 	{
@@ -68,6 +69,21 @@ app.use((req, res, next) => {
 	next();
 });
 
+app.use((req, res, next) => {
+  if (!req.userinfo) {
+    return next();
+  }
+ 
+  oktaClient.getUser(req.userinfo.sub)
+    .then(user => {
+      req.user = user;
+      res.locals.user = user;
+      next();
+    }).catch(err => {
+      next(err);
+    });
+});
+
 app.use(oidc.router)
 app.use(okta.middleware)
 
@@ -79,6 +95,7 @@ app.use('/register', registrationRouter)
 app.use('/index', indexRouter)
 app.use('/reset-password', resetPassword)
 app.use('/recipes', recipesRoutes);
+app.use('/instructions', instructionRoutes);
 app.get('/logout', (req, res) => {
   req.logout()
   res.redirect('/')

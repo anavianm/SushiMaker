@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="/style.css">
+<!--    <link rel="stylesheet" href="/style.css">-->
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/4764a23c80.js"></script>
   </head>
 
-<!--
   <body >
+<!--
     <div class="navbar">
       <a class="logo" href="index.html">🍣 SushiMaker</a>
       <a class="item" href="user.html"><i class="fa fa-fw fa-user"></i> Login</a></a>
@@ -22,9 +22,22 @@
     
     <div class="page" id="page">
       <div class="header">
-        <img class="smallImg" src="public/images/Salmon-Avocado-Sushi-Roll.jpg" alt="Sushi image">
+        <img class="smallImg" src="/images/Salmon-Avocado-Sushi-Roll.jpg" alt="Sushi image">
         <h1 id="recipeName" style="margin-top: 5px;">Name</h1>
-        <div class="heartButton" id="heartButton"><i class="fa fa-heart"></i> Complete</div>
+          
+        <form method="post">
+            <div class="hidden">
+                <input id ="likedRecipe" name="likedRecipe" value= "" />
+            </div>
+            <div>
+                <button class="heartButton" id="heartButton" type="submit"><i class="fa fa-heart"></i> Complete</button>
+            </div>
+        </form>
+          
+        <p id="liked">{{user.profile.likedRecipe}}</p>
+
+        
+            
       </div>
 
       <div class="container">
@@ -45,10 +58,28 @@
       </div>
     </div>
     
-    <script src="/speech.js"></script> 
+    <script src="/javascripts/speech.js"></script> 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
     </script>
+      
+    <script>
+       $(".hidden").hide();
+    
+        var current = document.getElementById('liked').innerHTML;
+        console.log(current);
+
+        var recipes = current.split(",");
+        
+
+//        var update = current + "Tuna Roll" +",";
+        var update = "";
+        document.getElementById('likedRecipe').value = update;
+
+
+          </script>
+
+
   </body>
 </html>
