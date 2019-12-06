@@ -1,8 +1,27 @@
 <!DOCTYPE html> 
-<div class="header">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+</head>
+<div class="header">
     <h1>Dashboard</h1>
+        <div>
+            <h3>Your Earned Badges! Collect them all!</h3>
+        </div>
+    
+        <div class="badges">
+            <div class="badge1"></div>
+            <div class="badge2"></div>
+            <div class="badge3"></div>
+            <div class="badge4"></div>
+        </div>
+    
+    <div>
+    <p id="liked">{{user.profile.likedRecipe}}</p>
+    </div>
 </div>
+
+
 
 
 <dl>
@@ -11,3 +30,35 @@
     <dd>{{this.details}}</dd>
   {{/each}}
 </dl>
+
+<script>
+
+    var likedRecipes = document.getElementById('liked').innerHTML;
+    
+    var recipeList = likedRecipes.split(",");
+    
+    if(recipeList.includes("cool")){
+        $(".badge1").html('<img src="/images/cooking-pot.png" class="badge1">');
+    }else{
+         $(".badge1").html('<img src="/images/lock.png" class="badge1">');
+    }
+    
+     if(recipeList.includes("Ncool")){
+        $(".badge2").html('<img src="/images/cooking-pot.png" class="badge2">');
+    }else{
+         $(".badge2").html('<img src="/images/lock.png" class="badge2">');
+    }
+    
+     if(recipeList.includes("Love")){
+        $(".badge3").html('<img src="/images/cooking-pot.png" class="badge3">');
+    }else{
+         $(".badge3").html('<img src="/images/lock.png" class="badge3">');
+    }
+    
+     if(recipeList.includes("Hello")){
+        $(".badge4").html('<img src="/images/cooking-pot.png" class="badge4">');
+    }else{
+         $(".badge4").html('<img src="/images/lock.png" class="badge4">');
+    }
+
+</script>
