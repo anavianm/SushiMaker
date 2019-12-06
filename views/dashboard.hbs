@@ -32,18 +32,20 @@
 </dl>
 
 <script>
+    
+    $("#liked").hide();
 
     var likedRecipes = document.getElementById('liked').innerHTML;
     
     var recipeList = likedRecipes.split(",");
     
-    if(recipeList.includes("cool")){
+    if(recipeList.includes("Tuna Roll")){
         $(".badge1").html('<img src="/images/cooking-pot.png" class="badge1">');
     }else{
          $(".badge1").html('<img src="/images/lock.png" class="badge1">');
     }
     
-     if(recipeList.includes("Ncool")){
+     if(recipeList.includes("Salmon Roll")){
         $(".badge2").html('<img src="/images/cooking-pot.png" class="badge2">');
     }else{
          $(".badge2").html('<img src="/images/lock.png" class="badge2">');

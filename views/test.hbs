@@ -27,13 +27,24 @@
 <!--<button onclick="post()">Liked</button>-->
 
 <form method="post">
-    <div id="hidden">
+    <div class="hidden">
         <input id ="likedRecipe" name="likedRecipe" value= "" />
     </div>
     <div>
         <button type="submit">Liked This</button>
     </div>
 </form>
+
+
+<form method="post">
+    <div class="hidden">
+        <input id ="likedRecipe1" name="likedRecipe" value= "" />
+    </div>
+    <div>
+        <button type="submit">Liked This</button>
+    </div>
+</form>
+
 
 
 
@@ -59,18 +70,22 @@
 
 <script type="text/javascript">
     
-    $("#hidden").hide();
+    $(".hidden").hide();
     
     var current = document.getElementById('liked').innerHTML;
     console.log(current);
     
     var recipes = current.split(",");
     
-    if(recipes.includes("cool")){
-        
-    }
-    var update = current + "cool" +",";
+//    if(recipes.includes("cool")){
+//        
+//    }
+    var update = current + "Tuna Roll" +",";
+//    var update = "";
     document.getElementById('likedRecipe').value = update;
+    
+    var update1 = current + "Salmon Roll" +",";
+    document.getElementById('likedRecipe1').value = update1;
 
     console.log(document.getElementById('likedRecipe').value);
 
