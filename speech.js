@@ -1,8 +1,10 @@
+const recipeRoutes = require('./routes/recipes');
+
 var synth = window.speechSynthesis;
 var voices = [];
 var ingredients = "";
 var steps =  "";
-var ingredientsToSpeech = "";
+var ingredientsTosSpeech = "";
 var stepsToSpeech = "";
 var image = "";
 var completed = 0;
