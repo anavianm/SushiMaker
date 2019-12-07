@@ -20,19 +20,18 @@
     <p id="liked">{{user.profile.likedRecipe}}</p>
     </div>
 </div>
+<div class="container">
+    <div class="content">
+        <dl>
+        {{#each descriptionList}}
+            <dt>{{this.term}}</dt>
+            <dd>{{this.details}}</dd>
+        {{/each}}
+        </dl>
 
-
-
-
-<dl>
-  {{#each descriptionList}}
-    <dt>{{this.term}}</dt>
-    <dd>{{this.details}}</dd>
-  {{/each}}
-</dl>
-
-
-<button><a href="/test">Edit Profile</a></button>
+        <button class="actionButton"><a href="/test">Edit Profile</a></button>
+    </div>
+</div>
 
 <script>
     

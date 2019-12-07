@@ -250,3 +250,10 @@ input[type=text] {
 .actionButton:hover {
     background-color:#231f20;
 }
+
+.content {
+    text-align: left;
+    width: 40%;
+    margin: auto;
+    margin-top: 100px;
+}
