@@ -72,6 +72,13 @@ body{
     background-color: #fff;
 }
 
+.yellowHeader {
+    padding: 20px;
+    text-align: center;
+    /* background-color:#ffda08; */
+
+}
+
 button {
     display: inline-block;
     margin-bottom: 0;
@@ -276,8 +283,9 @@ input:focus {
 .content {
     text-align: left;
     width: 40%;
-    margin: auto;
-    margin-top: 40px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 40px;
 }
 
 .container {
