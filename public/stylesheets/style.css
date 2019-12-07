@@ -257,9 +257,16 @@ input:focus {
     outline: none;
     color: #ffffff;
     text-decoration: none;
+    text-decoration-color: #fff !important;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
     width: 100%;
+}
+
+.actionButton a{
+    color: #fff;
+    text-decoration: none;
+    text-decoration-color: #fff !important;
 }
 
 .actionButton:hover {
