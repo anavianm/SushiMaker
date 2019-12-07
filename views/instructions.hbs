@@ -23,7 +23,7 @@
     <div class="page" id="page">
       <div class="header">
         <img class="smallImg" src="/images/Salmon-Avocado-Sushi-Roll.jpg" alt="Sushi image">
-        <h1 id="recipeName" style="margin-top: 5px;">Name</h1>
+        <h1 id="recipeName" style="margin-top: 5px;"></h1>
           
         <form method="post">
             <div class="hidden">
@@ -34,7 +34,10 @@
             </div>
         </form>
           
+          <button class="heartButton" id="signInPlease"><a href="/index"></a>Sign in to save recipes!</button>
+          
         <p id="liked">{{user.profile.likedRecipe}}</p>
+        <p id="loggedIn">{{user.profile.firstName}}</p>
 
         
             
@@ -58,27 +61,15 @@
       </div>
     </div>
     
-    <script src="/javascripts/speech.js"></script> 
+    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
     </script>
-      
-    <script>
-       $(".hidden").hide();
+    <script src="/javascripts/speech.js"></script>  
     
-        var current = document.getElementById('liked').innerHTML;
-        console.log(current);
-
-        var recipes = current.split(",");
-        
-
-//        var update = current + "Tuna Roll" +",";
-        var update = "";
-        document.getElementById('likedRecipe').value = update;
-
-
-          </script>
+      
+    
 
 
   </body>

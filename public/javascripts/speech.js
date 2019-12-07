@@ -9,6 +9,30 @@ var completed = 0;
 var completedText = "";
 var page = "";
 
+        
+$(".hidden").hide();
+$("#loggedIn").hide();
+$("#signInPlease").hide();
+$("#heartButton").hide();
+
+if((document.getElementById("loggedIn").innerHTML) == ""){
+    console.log("hello");
+    $("#signInPlease").show();
+}else{
+    $("#heartButton").show();
+}
+
+var current = document.getElementById('liked').innerHTML;
+console.log(current);
+
+var recipes = current.split(",");
+var recipe = document.getElementById('recipeName').innerHTML;
+
+var update = current + recipe +",";
+//        var update = "";
+document.getElementById('likedRecipe').value = update;
+
+
 document.addEventListener("DOMContentLoaded", () => {
     fetch('/stylesheets/recipe.json') 
     .then(d=>d.json())
@@ -58,20 +82,27 @@ function speak(text) {
     utterance.rate = 0.75;
     speechSynthesis.speak(utterance);
 }
+//
+//function complete(e) {
+//    if (!completed)  {
+//        localStorage.setItem(recipe, false);
+//        completed = 1;
+//        completedText = '<i class="fa fa-heart"></i>' + " Completed";
+//        document.getElementById('heartButton').style.cssText = 'background-color:#000000; color:#ffffff;';
+//        console.log(completed);
+//    } else {
+//        localStorage.setItem(recipe, true);
+//        console.log(localStorage(recipe));
+//        completed = 0;
+//        completedText = '<i class="fa fa-heart"></i>' + " Complete";
+//        document.getElementById('heartButton').style.cssText = 'background-color:#ffffff; color:#000000;';
+//        console.log(completed);
+//    } 
+//    document.getElementById("heartButton").innerHTML = completedText;
+//}
 
-function complete(e) {
-    if (!completed)  {
-        completed = 1;
-        completedText = '<i class="fa fa-heart"></i>' + " Completed";
-        document.getElementById('heartButton').style.cssText = 'background-color:#000000; color:#ffffff;';
-        console.log(completed);
-    } else {
-        completed = 0;
-        completedText = '<i class="fa fa-heart"></i>' + " Complete";
-        document.getElementById('heartButton').style.cssText = 'background-color:#ffffff; color:#000000;';
-        console.log(completed);
-    } 
-    document.getElementById("heartButton").innerHTML = completedText;
+if(recipes.includes(recipe)){
+    
 }
 
 function click(e) {
