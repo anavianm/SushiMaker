@@ -232,20 +232,7 @@ label {
     /* margin-bottom: 10px; */
 }
 
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #555;
-    outline: none;
-  }
-
-  input[type=text]:focus {
-    background-color: lightblue;
-  }
-
-  input {
+input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -253,13 +240,14 @@ input[type=text] {
     border: 1px solid #555;
     outline: none;
     display: 
-  }
-
-  input:focus {
     background-color: rgb(228, 228, 228);
-  }
+}
 
-  .actionButton {
+input:focus {
+    background-color: #ffda08 ;
+}
+
+.actionButton {
     display: block;
 	margin: 20px auto 20px;
     text-align: center;
@@ -286,3 +274,25 @@ input[type=text] {
     margin: auto;
     margin-top: 100px;
 }
+
+.container {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    text-align: center;
+    width: 1024px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.registerContainer {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    text-align: center;
+    width: 1024px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
