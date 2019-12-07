@@ -8,7 +8,7 @@ const client = new okta.Client({
   token: process.env.REGISTRATION_TOKEN,
 })
 
-const title = 'Create an account'
+const title = 'SushiMaker'
 
 router.get('/', (req, res, next) => {
   if (req.userinfo) {
