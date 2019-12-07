@@ -221,6 +221,8 @@ form {
     width: 40%;
     margin: auto;
     margin-top: 100px;
+    background-color: #fff;
+    padding: 40px;
 }
 
 label {
