@@ -283,7 +283,7 @@ input:focus {
 }
 
 .registerContainer {
-    margin: 60 auto;
+    padding: 40px auto;
     /* margin-bottom: 100px; */
     text-align: center;
     width: 1024px;
