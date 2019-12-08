@@ -8,29 +8,16 @@ var image = "";
 var completed = 0;
 var completedText = "";
 var page = "";
+var loadedRecipe;
 
         
 $(".hidden").hide();
 $("#loggedIn").hide();
 $("#signInPlease").hide();
-$("#heartButton").hide();
+//$(".heartButton").hide();
+//$("#signButton").hide();
 
-if((document.getElementById("loggedIn").innerHTML) == ""){
-    console.log("hello");
-    $("#signInPlease").show();
-}else{
-    $("#heartButton").show();
-}
 
-var current = document.getElementById('liked').innerHTML;
-console.log(current);
-
-var recipes = current.split(",");
-var recipe = document.getElementById('recipeName').innerHTML;
-
-//var update = current + recipe +",";
-        var update = "";
-document.getElementById('likedRecipe').value = update;
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -65,6 +52,7 @@ function display(data) {
 
     // Show data
     document.getElementById("recipeName").innerHTML = data[0].name;
+    loadedRecipe = data[0].name;
     document.getElementById("ingredientsData").innerHTML = ingredients;
     document.getElementById("stepsData").innerHTML = steps;
     document.getElementById("recipeImg").src = data[0].imageURL;
@@ -72,6 +60,41 @@ function display(data) {
     // Create buttons to speech
     document.getElementById("ingredientsToSpeech").setAttribute('data-words', ingredientsToSpeech);
     document.getElementById("stepsToSpeech").setAttribute('data-words', stepsToSpeech);
+    
+    var currentList = document.getElementById('liked').innerHTML;
+console.log(currentList);
+
+var recipes = currentList.split(",");
+var currentrecipe = loadedRecipe;
+//var currentrecipe = document.getElementById('recipeName').innerHTML;
+//console.log(ocument.getElementById('recipeName').innerHTML);
+console.log("curr is" + currentrecipe);
+
+//var update = current + recipe +",";
+var update = "Salmon Avocado Roll";
+document.getElementById('likedRecipe').value = update;
+
+console.log(document.getElementById("loggedIn").innerHTML);
+if((document.getElementById("loggedIn").innerHTML) == ""){
+    console.log("hello");
+     console.log("X sign in");
+    $("#signInPlease").show();
+    $("#heartButton").hide();
+}else{
+    console.log(recipes);
+    
+    if(recipes.includes(currentrecipe)){
+        console.log("This is a " + currentrecipe);
+        completedText = '<i class="fa fa-heart"></i>' + " Completed";
+        document.getElementById('heartButton').style.cssText = 'background-color:#000000; color:#ffffff;';
+        document.getElementById("heartButton").innerHTML = completedText;
+    }else{
+        console.log("sign in");
+        $("#heartButton").show();
+        $("#signInPlease").hide();
+    }
+}
+
 }
 
 function speak(text) {
@@ -101,8 +124,18 @@ function speak(text) {
 //    document.getElementById("heartButton").innerHTML = completedText;
 //}
 
-//if(recipes.includes(recipe)){
-//    //button already clicked
+
+$(document).ready(function() {
+
+
+});
+
+
+
+
+
+
+    
 //}else{
 //    //button open for click
 //    if(){//button is clicked
@@ -118,8 +151,8 @@ function click(e) {
     speak(text);
 }
 
-[...document.querySelectorAll('button')].forEach(function(button) {
-    button.onclick = click;
-    document.getElementById("heartButton").onclick = complete;
-});
+//[...document.querySelectorAll('button')].forEach(function(button) {
+//    button.onclick = click;
+//    document.getElementById("heartButton").onclick = complete;
+//});
 
