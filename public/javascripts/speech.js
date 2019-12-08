@@ -28,8 +28,8 @@ console.log(current);
 var recipes = current.split(",");
 var recipe = document.getElementById('recipeName').innerHTML;
 
-var update = current + recipe +",";
-//        var update = "";
+//var update = current + recipe +",";
+        var update = "";
 document.getElementById('likedRecipe').value = update;
 
 
@@ -101,9 +101,17 @@ function speak(text) {
 //    document.getElementById("heartButton").innerHTML = completedText;
 //}
 
-if(recipes.includes(recipe)){
-    
-}
+//if(recipes.includes(recipe)){
+//    //button already clicked
+//}else{
+//    //button open for click
+//    if(){//button is clicked
+//        //set button to clicked
+//    }else{
+//        //do nothing
+//    }
+//}
+
 
 function click(e) {
     var text = e.target.getAttribute('data-words');
