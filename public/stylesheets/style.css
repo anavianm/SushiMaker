@@ -107,6 +107,30 @@ button:active {
     /* background-color:#31ff08b9; */
 }
 
+.speechButton {
+    background-color:#ffda08;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    user-select: none;
+    font-size: 1.4vw;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.speechButton:hover {
+    background-color:#2b2402;
+    color: #fff;
+}
+
 .heartButton {
     display: block;
 	margin: 20px auto 20px;
@@ -123,7 +147,7 @@ button:active {
     text-decoration: none;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
-    width: 120px;
+    /* width: 160px; */
 }
 
 .heartButton:hover {

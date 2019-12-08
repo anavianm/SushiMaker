@@ -58,6 +58,18 @@ body {
 }
 
 button {
+    
+}
+
+button:hover {
+    
+}
+
+button:active {
+    /* background-color:#31ff08b9; */
+}
+
+.speechButton {
     display: inline-block;
     margin-bottom: 0;
     text-align: center;
@@ -76,13 +88,9 @@ button {
     transition: 0.3s ease;
 }
 
-button:hover {
+.speechButton:hover {
     background-color:#2b2402;
     color: #fff;
-}
-
-button:active {
-    /* background-color:#31ff08b9; */
 }
 
 .heartButton {
