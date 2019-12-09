@@ -10,6 +10,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const okta = require('./okta')
+const homeRouter = require('./routes/homepage');
 const indexRouter = require('./routes/index')
 const dashboardRouter = require('./routes/dashboard')
 //const profileRouter = require('./routes/profile')
@@ -88,6 +89,7 @@ app.use(oidc.router)
 app.use(okta.middleware)
 
 app.use('/', indexRouter)
+app.use('/homepage', homeRouter);
 app.use('/dashboard', oidc.ensureAuthenticated(), dashboardRouter)
 //app.use('/profile', oidc.ensureAuthenticated(), profileRouter)
 app.use('/test', oidc.ensureAuthenticated(), testRouter)

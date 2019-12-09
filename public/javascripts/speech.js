@@ -63,9 +63,8 @@ function display(data) {
     document.getElementById("ingredientsToSpeech").setAttribute('data-words', ingredientsToSpeech);
     document.getElementById("stepsToSpeech").setAttribute('data-words', stepsToSpeech);
     
-    var currentList = document.getElementById('liked').innerHTML;
+     var currentList = document.getElementById('liked').innerHTML;
     console.log(currentList);
-
     var recipes = currentList.split(",");
     var currentrecipe = loadedRecipe;
     //var currentrecipe = document.getElementById('recipeName').innerHTML;
@@ -73,6 +72,8 @@ function display(data) {
     console.log("curr is" + currentrecipe);
 
     //var update = current + recipe +",";
+    
+    
     var update = "Salmon Avocado Roll, Tuna Roll, Veggie Roll";
                 document.getElementById('likedRecipe').value = update;
     
@@ -120,8 +121,17 @@ function display(data) {
             $("#signInPlease").hide();
         }
     }
+    
+     console.log(document.getElementById("heartButton").innerHTML);
+    
+    
+
 
 }
+
+$(document).ready(function() {
+  
+})
     
 
 function speak(text) {
