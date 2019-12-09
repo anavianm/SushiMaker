@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Recipe Options Page</title>
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        font-family: Arial;
+        font-size: 17px;
+      }
+
+      .bodyContent{
+        padding:0.5%;
+      }
+
+      #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        max-width: 100%;
+        height: auto; 
+      }
+
+      .row1{
+		height: auto;
+		margin-top: 20px;
+		padding-top: 40px;
+		padding: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	.card {
+		height: auto;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		float: left;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		background: rgba(248, 246, 229 , 0.4 );
+    	flex: 0 1 calc(25% - 1em);
+	}
+
+	.card:hover {
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
+	}
+
+	.container {
+		padding: 2px 16px;
+	}
+
+	.front{
+		height: auto;
+	}
+	@media screen and (min-width: 20em) {
+		.row1 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.card {
+			flex: 0 1 calc(100% - 3em);
+		}
+	}
+
+	@media screen and (min-width: 40em) {
+		.row1 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.card {
+			flex: 0 1 calc(50% - 1em);
+		}
+	}
+
+	@media screen and (min-width: 60em) {
+
+		.card {
+			flex: 0 1 calc(30% - 1em);
+		}
+	}
+
+	</style>
+	</head>
+	<body>
+
+	<video autoplay muted loop id="myVideo">
+      <source src="food.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div class = "bodyContent">
+    <div class="row1">
+			<div class="card" id="1">
+				<div class="front" id="front1">
+					<img src="sushiicon.png" alt="Avatar" style="width:100%">
+						<div class="container">
+							<p id="p1">SPICY SALMON AVOCADO ROLL</p>
+							<p id="p2">Servings: 4</p>
+						</div>
+				</div>
+			</div>
+			<div class="card" id="2">
+				<div class="front" id="front1">
+					<img src="transparent.png" alt="Avatar" style="width:100%">
+						<div class="container">
+							<p id="p3"></p>
+							<p id="p4"></p>
+						</div>
+				</div>
+			</div>
+			<div class="card" id="3">
+				<div class="front" id="front1">
+					<img src="transparent.png" alt="Avatar" style="width:100%">
+						<div class="container">
+							<p id="p5"></p>
+							<p id="p6"></p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
