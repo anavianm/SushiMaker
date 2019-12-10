@@ -7,18 +7,15 @@ const bodyParser = require('body-parser');
 const Recipe = require('../models/recipe');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', {
-    title: 'SushiMaker',
-    user: req.user,
-  })
-})
 
 
 router.get('/', (req, res, next) => {
 	var info1 = req.query.first;
+    info1 = info1.toLowerCase();
 	var info2 = req.query.second;
+    info2 = info2.toLowerCase();
 	var info3 = req.query.third;
+    info3 = info3.toLowerCase();
 	console.log('Ingredients are: First: ' + info1 + ', Second: ' + info2 + ', Third: ' + info3);
 	if (info1 && info2 && info3) {
 		Recipe.find({ "ingredients.unmeasured": {$all: [info1, info2, info3] }})
@@ -126,5 +123,13 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 3');
 	}
 });
+
+
+router.get('/', function (req, res, next) {
+  res.render('index', {
+    title: 'SushiMaker',
+    user: req.user,
+  })
+})
 
 module.exports = router;
