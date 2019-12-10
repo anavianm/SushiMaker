@@ -8,7 +8,6 @@ const Recipe = require('../models/recipe');
 
 /* GET home page. */
 
-
 router.get('/', (req, res, next) => {
 	var info1 = req.query.first;
     info1 = info1.toLowerCase();
@@ -18,7 +17,7 @@ router.get('/', (req, res, next) => {
     info3 = info3.toLowerCase();
 	console.log('Ingredients are: First: ' + info1 + ', Second: ' + info2 + ', Third: ' + info3);
 	if (info1 && info2 && info3) {
-		Recipe.find({ "ingredients.unmeasured": {$all: [info1, info2, info3] }})
+		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info1, info2, info3] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
@@ -33,7 +32,7 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 1, 2 and 3');
 	}
 	else if (info1 && info2) {
-		Recipe.find({ "ingredients.unmeasured": {$all: [info1, info2] }})
+		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info1, info2] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
@@ -48,7 +47,7 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 1 and 2');
 	}
 	else if (info1 && info3) {
-		Recipe.find({ "ingredients.unmeasured": {$all: [info1, info3] }})
+		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info1, info3] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
@@ -63,7 +62,7 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 1 and 3');
 	}
 	else if (info2 && info3) {
-		Recipe.find({ "ingredients.unmeasured": {$all: [info2, info3] }})
+		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info2, info3] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
@@ -78,7 +77,7 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 2 and 3');
 	}
 	else if (info1) {
-		Recipe.find({ "ingredients.unmeasured": {$all: [info1] }})
+		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info1] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
@@ -93,7 +92,7 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 1');
 	}
 	else if (info2) {
-		Recipe.find({ "ingredients.unmeasured": {$all: [info2] }})
+		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info2] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
@@ -108,7 +107,7 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 2');
 	}
 	else if (info3) {
-		Recipe.find({ "ingredients.unmeasured": {$all: [info3] }})
+		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info3] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
@@ -122,7 +121,10 @@ router.get('/', (req, res, next) => {
 		});
 		console.log('Querying 3');
 	}
+console.log(FinalResult);
+console.log("hello");
 });
+
 
 
 router.get('/', function (req, res, next) {

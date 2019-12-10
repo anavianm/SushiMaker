@@ -18,8 +18,6 @@ $("#signInPlease").hide();
 //$("#signButton").hide();
 
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
     fetch('/stylesheets/recipe.json') 
     .then(d=>d.json())
