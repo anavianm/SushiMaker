@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 
 const okta = require('./okta')
 const homeRouter = require('./routes/homepage');
+const optionRouter = require('./routes/options');
 const indexRouter = require('./routes/index')
 const dashboardRouter = require('./routes/dashboard')
 //const profileRouter = require('./routes/profile')
@@ -95,6 +96,7 @@ app.use('/dashboard', oidc.ensureAuthenticated(), dashboardRouter)
 app.use('/test', oidc.ensureAuthenticated(), testRouter)
 app.use('/register', registrationRouter)
 app.use('/index', indexRouter)
+app.use('/options', optionRouter);
 app.use('/reset-password', resetPassword)
 app.use('/recipes', recipesRoutes);
 app.use('/instructions', instructionRoutes);
