@@ -1,19 +1,54 @@
 <!DOCTYPE html> 
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 
 </head>
 <div class="yellowHeader">
     <h1>Dashboard</h1>
         <div>
-            <h3>Your Earned Badges! Collect them all!</h3>
+            <h3>Your Earned Badges! Collect them all! Click to learn more!</h3>
         </div>
     
+    <div class="outer">
+    
+   
         <div class="badges">
             <div class="badge1"></div>
             <div class="badge2"></div>
             <div class="badge3"></div>
             <div class="badge4"></div>
+        </div>
+    
+        
+
+    </div>
+    
+    <div class="explanations">
+            <div id="explanation1">
+                <p>Gettin Started!</p>
+                <p>Get this badge when you complete your first recipe</p>
+            </div>
+                
+            <div id="explanation2">
+                <p>Salmon Master!</p>
+                <p>Get this badge when you complete 5 salmon recipes</p>
+            </div>
+            
+            <div id="explanation3">
+                <p>Tekka Titan!</p>
+                <p>Get this badge when you complete 5 Tuna recipes!</p>
+
+            </div>
+            
+            <div id="explanation4">
+                <p>Sushi Master!</p>
+                <p>Get this badge when you complete every recipe!</p>
+
+            </div>
         </div>
     
     <div>
@@ -36,10 +71,14 @@
 <script>
     
     $("#liked").hide();
+    $(".explanations").hide();
+    $("#explanation1").hide();
+    
 
     var likedRecipes = document.getElementById('liked').innerHTML;
     
-    var recipeList = likedRecipes.split(",");
+    var recipeList = likedRecipes.split(", ");
+    console.log(recipeList);
     
     if(recipeList.includes("Salmon Avocado Roll")){
         $(".badge1").html('<img src="/images/sushi.png" class="badge1">');
@@ -64,5 +103,51 @@
     }else{
          $(".badge4").html('<img src="/images/lock.png" class="badge4">');
     }
+    
+    
+    $( ".badge" + 1 ).click(function(evt) {
+        evt.stopImmediatePropagation();
+        console.log("clicked");
+        $(".explanations").show();
+        $( "#explanation" + 1 ).show( "fold", "swing", 700 );
+        $("#explanation" +1).delay(3000).hide("fold", "swing", 700);
+        console.log("hello");
+       
+        
+    });
+    
+    $(".explanations").delay(4000).hide();
 
+
+    
+    $( ".badge" + 2 ).click(function(evt) {
+            evt.stopImmediatePropagation();
+            console.log("clicked");
+            $(".explanations").show();
+            $( "#explanation" + 2 ).show( "fold", "swing", 700 );
+            $("#explanation" +2).delay(3000).hide("fold", "swing", 700);
+            console.log("hello");
+    });
+    
+      $(".explanations").delay(4000).hide();
+    
+    $( ".badge" + 3 ).click(function(evt) {
+            evt.stopImmediatePropagation();
+            console.log("clicked");
+            $(".explanations").show();
+            $( "#explanation" + 3 ).show( "fold", "swing", 700 );
+            $("#explanation" +3).delay(3000).hide("fold", "swing", 700);
+            console.log("hello");
+    });
+    
+    $( ".badge" + 4 ).click(function(evt) {
+            evt.stopImmediatePropagation();
+            console.log("clicked");
+            $(".explanations").show();
+            $( "#explanation" + 4 ).show( "fold", "swing", 700 );
+            $("#explanation" + 4).delay(3000).hide("fold", "swing", 700);
+            console.log("hello");
+    });
+
+  $(".explanations").delay(4000).hide();
 </script>

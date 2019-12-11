@@ -12,6 +12,7 @@ var loadedRecipe;
 
         
 $(".hidden").hide();
+$("#liked").hide();
 $("#loggedIn").hide();
 $("#signInPlease").hide();
 //$(".heartButton").hide();

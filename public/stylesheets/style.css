@@ -9,12 +9,21 @@ body{
     padding: 0 0;
     margin: auto;
 }
+
+.outer{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+/*    background: #f0e68c;*/
+}
 .badge1, .badge2, .badge3, .badge4 {
     float: left;
     text-align: center;
     height: 50px;
     width: auto;
     padding: 2px;
+    
+    
 }
 
 .badges{
@@ -25,6 +34,7 @@ body{
     height: 50px;
     width: auto;
 }
+
 
 
 .navbar {
@@ -310,5 +320,36 @@ button {
     align-items: center;
     box-sizing: border-box;
     background-color: #ffffff;
+}
+
+.explanations{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    height: auto;
+    width: auto;
+    
+}
+
+#explanation1, #explanation2, #explanation3, #explanation4{
+    background-color: #fff;
+    float: left;
+    text-align: center;
+    padding: 2px;
+    display: none;
+    width: 100px;
+    height: 100px;
+    overflow-wrap:break-word;
+    font-size: 10px;
+    border-radius: 6px;
+}
+
+.explanations p{
+    text-align: left;
+    font-size: 1.2em;
+    overflow-wrap: break-word;
 }
 
