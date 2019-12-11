@@ -27,9 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Render display 
         display(data);
-    })
-    
-    
+    })  
 })
 
 function display(data) {

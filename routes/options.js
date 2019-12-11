@@ -121,14 +121,22 @@ router.get('/', (req, res, next) => {
 		});
 		console.log('Querying 3');
 	}
+    
+//    res.render('options', {
+//        title:'SushiMaker',
+//    })
+    
 console.log(FinalResult);
+    
+
+    
 console.log("hello");
 });
 
 
 
 router.get('/', function (req, res, next) {
-  res.render('index', {
+  res.render('options', {
     title: 'SushiMaker',
     user: req.user,
   })
