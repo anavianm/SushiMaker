@@ -29,15 +29,16 @@ function display(data) {
     // Store data
     ingredients += "<ul>";
     for (x in data[0].ingredients) {
-        ingredients += "<li>" + data[0].ingredients[x].quantity + data[0].ingredients[x].name;
-        ingredientsToSpeech += data[0].ingredients[x].quantity + data[0].ingredients[x].name + ". ";
+        var ingredientName = data[0].ingredients.unmeasured[x];
+        ingredients += "<li>" + ingredientName + data[0].ingredients[x].measured[ingredientName];
+        ingredientsToSpeech += ingredientName + data[0].ingredients[x].measured[ingredientName] + ". ";
     }
     ingredients += "</ul>";
 
     steps += "<ol>";
     for (x in data[0].steps) {
-        steps += "<li>" + data[0].steps[x];
-        stepsToSpeech += data[0].steps[x];
+        steps += "<li>" + data[0].instructions[x];
+        stepsToSpeech += data[0].instructions[x];
     }
     steps += "</ol>";
 
