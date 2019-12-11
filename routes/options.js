@@ -3,6 +3,7 @@ const router = express.Router()
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const fs = require('fs');
 
 const Recipe = require('../models/recipe');
 
@@ -17,10 +18,16 @@ router.get('/', (req, res, next) => {
     info3 = info3.toLowerCase();
 	console.log('Ingredients are: First: ' + info1 + ', Second: ' + info2 + ', Third: ' + info3);
 	if (info1 && info2 && info3) {
-		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info1, info2, info3] }})
+        Recipe.find({ "ingredients.unmeasured": {$all: [info1, info2, info3] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
+			fs.writeFile("OOF.json", docs, function(err) {
+				if(err) {
+        			return console.log(err);
+    			}
+    		console.log("The file was saved!");
+		}); 
 			res.status(200).json(docs);
 		})
 		.catch(err => {
@@ -32,10 +39,16 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 1, 2 and 3');
 	}
 	else if (info1 && info2) {
-		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info1, info2] }})
+		Recipe.find({ "ingredients.unmeasured": {$all: [info1, info2] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
+			fs.writeFile("/stylesheets/recipeResponse.json", docs, function(err) {
+				if(err) {
+        			return console.log(err);
+    			}
+    		console.log("The file was saved!");
+		}); 
 			res.status(200).json(docs);
 		})
 		.catch(err => {
@@ -47,10 +60,16 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 1 and 2');
 	}
 	else if (info1 && info3) {
-		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info1, info3] }})
+		Recipe.find({ "ingredients.unmeasured": {$all: [info1, info3] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
+			fs.writeFile("OOF.json", docs, function(err) {
+				if(err) {
+        			return console.log(err);
+    			}
+    		console.log("The file was saved!");
+		}); 
 			res.status(200).json(docs);
 		})
 		.catch(err => {
@@ -62,10 +81,16 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 1 and 3');
 	}
 	else if (info2 && info3) {
-		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info2, info3] }})
+		Recipe.find({ "ingredients.unmeasured": {$all: [info2, info3] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
+			fs.writeFile("OOF.json", docs, function(err) {
+				if(err) {
+        			return console.log(err);
+    			}
+    		console.log("The file was saved!");
+		}); 
 			res.status(200).json(docs);
 		})
 		.catch(err => {
@@ -81,6 +106,12 @@ router.get('/', (req, res, next) => {
 		.exec()
 		.then(docs => {
 			console.log(docs);
+			fs.writeFile("OOF.json", docs, function(err) {
+				if(err) {
+        			return console.log(err);
+    			}
+    		console.log("The file was saved!");
+		}); 
 			res.status(200).json(docs);
 		})
 		.catch(err => {
@@ -92,10 +123,16 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 1');
 	}
 	else if (info2) {
-		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info2] }})
+		Recipe.find({ "ingredients.unmeasured": {$all: [info2] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
+			fs.writeFile("OOF.json", docs, function(err) {
+				if(err) {
+        			return console.log(err);
+    			}
+    		console.log("The file was saved!");
+		}); 
 			res.status(200).json(docs);
 		})
 		.catch(err => {
@@ -107,10 +144,16 @@ router.get('/', (req, res, next) => {
 		console.log('Querying 2');
 	}
 	else if (info3) {
-		var FinalResult = Recipe.find({ "ingredients.unmeasured": {$all: [info3] }})
+        Recipe.find({ "ingredients.unmeasured": {$all: [info3] }})
 		.exec()
 		.then(docs => {
 			console.log(docs);
+			fs.writeFile("OOF.json", docs, function(err) {
+				if(err) {
+        			return console.log(err);
+    			}
+    		console.log("The file was saved!");
+		}); 
 			res.status(200).json(docs);
 		})
 		.catch(err => {
