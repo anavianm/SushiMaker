@@ -44,27 +44,28 @@ function display(data) {
     ingredients += "<ul>";
     
     for(var i = 0; i < data.length; i++){
+        console.log("clicked recipe is " + clickedRecipe);
         if (data[i].name == clickedRecipe){
             recipeId = i;
         }
     }
     
-    for (x in data[0].ingredients) {
-        ingredients += "<li>" + data[0].ingredients[x].quantity + data[0].ingredients[x].name;
-        ingredientsToSpeech += data[0].ingredients[x].quantity + data[0].ingredients[x].name + ". ";
+    for (x in data[recipeId].ingredients) {
+        ingredients += "<li>" + data[recipeId].ingredients[x].quantity + data[recipeId].ingredients[x].name;
+        ingredientsToSpeech += data[recipeId].ingredients[x].quantity + data[recipeId].ingredients[x].name + ". ";
     }
     
     ingredients += "</ul>";
 
     steps += "<ol>";
-    for (x in data[0].instructions) {
-        steps += "<li>" + data[0].instructions[x];
-        stepsToSpeech += data[0].instructions[x];
+    for (x in data[recipeId].instructions) {
+        steps += "<li>" + data[recipeId].instructions[x];
+        stepsToSpeech += data[recipeId].instructions[x];
     }
     steps += "</ol>";
 
     // Show data
-    document.getElementById("recipeName").innerHTML = data[0].recipe;
+    document.getElementById("recipeName").innerHTML = data[recipeId].recipe;
 //    
 //    document.getElementById("cooktime").innerHTML = data[0].time;
 //    
@@ -72,7 +73,7 @@ function display(data) {
 //    
 //    document.getElementById("calories").innerHTML = data[0].calories
     
-    loadedRecipe = data[0].recipe;
+    loadedRecipe = data[recipeId].recipe;
     document.getElementById("ingredientsData").innerHTML = ingredients;
     document.getElementById("stepsData").innerHTML = steps;
 //    document.getElementById("recipeImg").src = data[0].imageURL;
