@@ -103,6 +103,19 @@
     <p>{{finalResult}}</p>
 
     <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    fetch('./stylesheets/recipeResponse.json') 
+//    fetch('recipe.json') 
+    .then(d=>d.json())
+    .then(data=>{
+        console.log(data);
+
+        // Render display 
+        display(data);
+    }).catch(e => {
+        console.log(e);
+    })
+})
 
     var divs = "";
 
@@ -121,14 +134,17 @@
 
 	    // Store data - Name 
 	    ingredients += "<ul>";
-	    for (x in data[0].ingredients) {
-	        ingredients += "<li>" + data[0].ingredients[x].quantity + data[0].ingredients[x].name;
-	    }
+	    
+	    for (var i = 0; i < data.length; i++){ 
+	 
 
 	    // Show data - Name and Image 
-	    document.getElementById("recipeName").innerHTML = data[0].name;
-	    loadedRecipe = data[0].name;
-	    document.getElementById("recipeImg").src = data[0].imageURL;
+	    document.getElementById("recipeName").innerHTML = data[0].recipe;
+	    loadedRecipe = data[0].recipe;
+	    document.getElementById("recipeImg").src = data[0].picture;
+
+	}
+
 	}
 	
 	</script>
