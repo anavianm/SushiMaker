@@ -44,6 +44,8 @@
         padding: 2%;
 
       }
+        
+        
 
       .formCol {
         float: left;
@@ -164,6 +166,13 @@
         width: 20%;
         height:auto;
       }
+        
+        form{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        }
 
 
     </style>
@@ -189,7 +198,7 @@
               <input type="hidden" id="ingredient-id2"><br><br>
               <input id="ingredient3" name="third">
               <input type="hidden" id="ingredient-id3"><br><br>
-              <input type="submit" value="Submit" />            
+<!--              <input type="submit" value="Submit" />            -->
             <p id="p1"></p>
         </div>
         <div class = "imageContainer">
@@ -202,8 +211,8 @@
           <div class = "backButton">
             <input id = "resetbutton" class="backButtonStyle" type="reset"> 
           </div>
-          <div class = "nextButton">
-            <a href = "/options" button class="nextButtonStyle">Next</a>
+            <button class="nextButtonStyle" type="submit" value="Submit">Next</button>
+<!--            <a href = "/options" button class="nextButtonStyle">Next</a>-->
           </div>
           </form>
         </div>

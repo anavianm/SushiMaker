@@ -8,63 +8,12 @@
     'Cut each roll in half, and then half again, and then half again, so each roll is cut into 8 even pieces. Serve with pickled ginger, wasabi, and soy sauce.'
   ],
   _id: 5de390f92160a26b4a0dd41e,
-  picture: 'SalmonAvocadoRoll.jpg',
   recipe: 'Salmon Avocado Roll',
   type: 'Maki',
   servings: '8',
   calories: '',
   time: { prep: '25 mins', cook: '', total: '25 mins' },
-  ingredients: [
-    {
-      name: 'avocado',
-      value: 'AVOCADO',
-      icon: '',
-      quantity: '1 (thinly sliced)'
-    },
-    {
-      name: 'nori',
-      value: 'NORI',
-      icon: 'Nori.png',
-      quantity: '4 sheets'
-    },
-    {
-      name: 'rice vinegar',
-      value: 'RICE VINEGAR',
-      icon: '',
-      quantity: ' 1 tbsp.'
-    },
-    {
-      name: 'sushi rice',
-      value: 'SUSHI RICE',
-      icon: 'Rice.png',
-      quantity: '3 cups'
-    },
-    {
-      name: 'salmon',
-      value: 'SALMON',
-      icon: 'Salmon.png',
-      quantity: '8 oz. (1/2 in. strips)'
-    },
-    {
-      name: 'pickled ginger',
-      value: 'PICKLED GINGER',
-      icon: 'Ginger.png',
-      quantity: ''
-    },
-    {
-      name: 'wasabi',
-      value: 'WASABI',
-      icon: 'Wasabi.png',
-      quantity: ''
-    },
-    {
-      name: 'soy sauce',
-      value: 'SOY SAUCE',
-      icon: 'Soysauce.png',
-      quantity: ''
-    }
-  ],
-  ingredient: {
+  ingredients: {
     unmeasured: [
       'avocado',
       'nori',
@@ -84,6 +33,77 @@
       'pickled ginger': '',
       wasabi: '',
       'soy sauce': ''
+    }
+  }
+},{
+  instructions: [
+    'In a bowl, cover the rice with cold water. Rinse the rice until the water becomes cloudy. Drain and repeat 4 to 5 times or until the water runs clear. Leave the rice in a strainer until thoroughly drained.',
+    'In a saucepan over high heat, bring the rice, water and salt to a boil. Cover and cook over low heat for 15 minutes or until the liquid is completely absorbed. Remove from the heat and let rest, covered, for 10 minutes.',
+    'Meanwhile, in a small saucepan over medium-low heat, gently warm the vinegar and sugar until the sugar has dissolved.',
+    'Spread the cooked rice onto a baking sheet and pour the vinegar mixture overtop. Gently combine to coat and separate the grains of rice. Spread out the rice again and cover with plastic wrap. Let cool slightly.',
+    'With a sharp knife, trim and discard the discoloured sections of the salmon. While holding the knife at 30°, finely slice the fish against the grain to obtain slices 4 inches (10 cm) long (see note). Set aside on a cold plate or refrigerate while shaping the rice balls.',
+    'With slightly moistened hands, shape the rice into 2 1/2-inch (6 cm) oblong balls using 2 tbsp of rice for each. Spread a small amount of wasabi onto each rice ball, to taste, and cover with a salmon slice (see note).',
+    'Serve with the soy sauce and pickled ginger.'
+  ],
+  _id: 5defdfdd1c9d440000643406,
+  recipe: 'Salmon Nigiri',
+  type: 'Nigiri',
+  servings: '24',
+  calories: '50',
+  time: { prep: '50 mins', cook: '15 mins', total: '1 hour 15 mins' },
+  ingredients: {
+    unmeasured: [
+      'sushi rice',
+      'water',
+      'salt',
+      'rice vinegar',
+      'sugar',
+      'salmon',
+      'wasabi',
+      'soy sauce',
+      'pickled ginger'
+    ],
+    measured: {
+      'sushi rice': '1 1/2 cups',
+      water: '1 3/4 cups',
+      salt: '1 tsp.',
+      'rice vinegar': '3 tbsp.',
+      sugar: '1 tbsp.',
+      salmon: '1 lb. (sushi grade)',
+      wasabi: '1sp.',
+      'soy sauce': '',
+      'pickled ginger': ''
+    }
+  }
+},{
+  instructions: [
+    'In a small bowl, mix the mayonnaise, gochujang and fish sauce until thoroughly combined.',
+    'On a sushi mat lay down the nori. Spread the sushi rice over the nori in an even layer. Place the salmon horizontally over the bottom third of the sheet, about 1 inch from the edge. Top with some scallions. Roll up tightly and cut into 4 pieces. Garnish with the spicy mayo.'
+  ],
+  _id: 5defe1f91c9d440000643407,
+  recipe: 'Spicy Salmon Roll',
+  type: 'Maki',
+  servings: '1',
+  calories: '',
+  time: { prep: '15 mins', cook: '', total: '15 mins' },
+  ingredients: {
+    unmeasured: [
+      'mayonnaise',
+      'gochujang',
+      'fish sauce',
+      'nori',
+      'sushi rice',
+      'salmon',
+      'scallions'
+    ],
+    measured: {
+      'mayonnaise oil': '1/4 cup',
+      gochujang: '2 tbsp.',
+      'fish sauce': '1 tsp.',
+      nori: '1 sheet',
+      'sushi rice': '1 cup',
+      salmon: '3 thin slices (sushi grade)',
+      scallions: '(julienned)'
     }
   }
 },{
@@ -113,77 +133,12 @@
     'For this sushi roll, Chef Devaux suggests creating a backdrop of fanned cucumber and carrot spirals in the near corner. Neatly arrange your slices in a diagonal fashion on the board. Finish with a ramekin of soy sauce in front of the slices, along with a teaspoon of freshly grated wasabi.'
   ],
   _id: 5df133f21c9d44000043e009,
-  picture: 'RainbowRoll.jpg',
   recipe: 'Rainbow Roll',
   type: 'Maki',
   servings: '',
   calories: '',
   time: { prep: '', cook: '', total: '' },
-  ingredients: [
-    { name: 'kani', value: 'KANI', icon: '', quantity: '3 sticks' },
-    { name: 'masago', value: 'MASAGO', icon: '', quantity: '3 tbsp.' },
-    {
-      name: 'prawns',
-      value: 'PRAWNS',
-      icon: '',
-      quantity: '6 (large)'
-    },
-    {
-      name: 'yellowtail',
-      value: 'YELLOWTAIL',
-      icon: 'Yellowtail.png',
-      quantity: '1 filet (sushi grade)'
-    },
-    {
-      name: 'ahi tuna',
-      value: 'TUNA',
-      icon: 'Tuna.png',
-      quantity: '1 filet (sushi grade)'
-    },
-    {
-      name: 'salmon',
-      value: 'SALMON',
-      icon: 'Salmon.png',
-      quantity: '1 filet (sushi grade)'
-    },
-    {
-      name: 'nori',
-      value: 'NORI',
-      icon: 'Nori.png',
-      quantity: '1 sheet'
-    },
-    {
-      name: 'sushi rice',
-      value: 'RICE',
-      icon: 'Rice.png',
-      quantity: '1 cup'
-    },
-    {
-      name: 'cucumber',
-      value: 'CUCUMBER',
-      icon: 'Cucumber.png',
-      quantity: '1 (cut into 1cm wide strips)'
-    },
-    {
-      name: 'avocado',
-      value: 'AVOCADO',
-      icon: 'Avocado.png',
-      quantity: '1'
-    },
-    {
-      name: 'soy sauce',
-      value: 'SOYSAUCE',
-      icon: 'Soysauce.png',
-      quantity: ''
-    },
-    {
-      name: 'wasabi',
-      value: 'WASABI',
-      icon: 'Wasabi.png',
-      quantity: ''
-    }
-  ],
-  ingredient: {
+  ingredients: {
     unmeasured: [
       'kani',      'masago',
       'prawns',    'yellowtail',
@@ -191,7 +146,70 @@
       'nori',      'sushi rice',
       'cucumber',  'avocado',
       'soy sauce', 'wasabi'
-    ]
+    ],
+    measured: {
+      kani: '3 sticks',
+      masago: '3 tbsp.',
+      prawns: '6 (large)',
+      yellowtail: '1 filet (sushi grade)',
+      'ahi tuna': '1 filet (sushi grade)',
+      salmon: '1 filet (sushi grade)',
+      nori: '1 sheet',
+      'sushi rice': '1 cup',
+      cucumber: '1 (cut into 1cm wide strips)',
+      avocado: '1',
+      'soy sauce': '',
+      wasabi: ''
+    }
+  }
+},{
+  instructions: [
+    'Make the rice: Put the rice in a small saucepan and add 1 1/4 cups water. Bring to a boil, then cover, reduce the heat to low and cook until the water is absorbed, about 15 minutes. Remove from the heat and let stand, covered, 10 minutes. Meanwhile, whisk the rice vinegar, sugar and 1 teaspoon salt in a large bowl. Gently stir in the sesame seeds and cooked rice with a rubber spatula and let cool to room temperature. (The rice can be made up to 2 hours ahead; cover with a damp cloth.)',
+    'Meanwhile, make the sauce: Combine the mayonnaise, lemon juice, Sriracha, soy sauce, sesame oil and ginger in a medium bowl. Cover and refrigerate until ready to use.',
+    'Make the tuna: Rub the tuna with 1/2 teaspoon each salt and pepper. Heat a nonstick skillet over medium-high heat until hot. Add the vegetable oil, then add the tuna and sear until golden brown, about 2 minutes per side. Transfer to a plate and refrigerate until ready to use, or up to 1 hour.',
+    'Assemble the rolls: Toast the seaweed by waving it directly over a gas or electric burner over medium heat. Cut each sheet in half with kitchen shears to make 12 rectangles. Thinly slice the tuna and season with salt. Lay a seaweed rectangle on a work surface with a long side facing you. Press some rice onto the left side of the sheet using moistened fingers, leaving a 1-inch border on the left. Top with 1 slice each of tuna and avocado, a spoonful of sauce, and some cucumber, carrot and chives. Starting from the bottom left corner, tightly roll into a cone shape, moistening the edge of the seaweed to seal. Repeat with the remaining ingredients. Serve with pickled ginger and more sauce.'
+  ],
+  _id: 5df140851c9d4400008063cc,
+  recipe: 'Spicy Salmon Hand Roll',
+  type: 'Temaki',
+  servings: '6',
+  calories: '',
+  time: { prep: '45 mins', cook: '25 mins', total: '1 hour 10 mins' },
+  ingredients: {
+    unmeasured: [
+      'sushi rice',   'rice vinegar',
+      'sugar',        'salt',
+      'sesame seeds', 'mayonnaise',
+      'lemon juice',  'sriracha',
+      'soy sauce',    'sesame oil',
+      'ginger',       'salmon',
+      'pepper',       'vegetable',
+      'nori',         'avocado',
+      'cucumber',     'carrot',
+      'chive',        'pickled ginger'
+    ],
+    measured: {
+      'sushi rice': '1 1/4 cups',
+      'rice vinegar': '1 tbsp.',
+      sugar: '1 tbsp.',
+      salt: '',
+      'sesame seeds': '2 tbsp.',
+      mayonnaise: '2/3 cup',
+      'lemon juice': '2 tbsp.',
+      sriracha: '4 tsp.',
+      'soy sauce': '1 tbsp.',
+      'sesame oil': '1 tsp.',
+      ginger: '1 tsp. (grated, peeled)',
+      salmon: '3/4 lbs. (sushi grade, 1 1/4 inch thick)',
+      pepper: '(freshly ground)',
+      'vegetable oil': '1 tbsp.',
+      nori: '6 sheets',
+      avocado: '1 (pitted, peeled, thinky sliced)',
+      cucumber: '1 (cut into matchsticks)',
+      carrot: '1 (cut into matchsticks)',
+      chives: '1/2 bunch (cut into 3 inch pieces)',
+      'pickled ginger': ''
+    }
   }
 },{
   instructions: [
@@ -206,31 +224,17 @@
     'You can add whatever you desire and can serve it with wasabi, caviar etc'
   ],
   _id: 5df1427d1c9d4400008063cd,
-  picture: 'NarutoRoll.jpg',
   recipe: 'Naruto Roll',
   type: 'Maki',
   servings: '3',
   calories: '',
   time: { prep: '40 mins', cook: '', total: '40 mins' },
-  ingredients: [
-    {
-      name: 'cucumber',
-      value: 'CUCUMBER',
-      icon: 'Cucumber.png',
-      quantity: '1 (long)'
-    },
-    {
-      name: 'avocado',
-      value: 'AVOCADO',
-      icon: 'Avocado.png',
-      quantity: '1/2'
-    },
-    {
-      name: 'salmon',
-      value: 'SALMON',
-      icon: 'Salmon.png',
-      quantity: '3 slices (sushi grade)'
+  ingredients: {
+    unmeasured: [ 'cucumber', 'avocado', 'salmon' ],
+    measured: {
+      cucumber: '1 (long)',
+      avocado: '1/2',
+      salmon: '3 slices (sushi grade)'
     }
-  ],
-  ingredient: { unmeasured: [ 'cucumber', 'avocado', 'salmon' ] }
+  }
 }

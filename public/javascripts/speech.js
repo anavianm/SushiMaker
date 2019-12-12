@@ -20,10 +20,12 @@ $("#signInPlease").hide();
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('/stylesheets/recipe.json') 
+//    fetch('./stylesheets/recipeResponse.json') 
+    fetch('recipe.json') 
+    console.log("hello")
     .then(d=>d.json())
     .then(data=>{
-        console.log(data);
+//        console.log(data);
 
         // Render display 
         display(data);
@@ -31,26 +33,36 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function display(data) {
+    console.log("hello")
     console.log(data);
     document.getElementById("page").style.visibility = 'visible';
 
     // Store data
     ingredients += "<ul>";
+    
     for (x in data[0].ingredients) {
         ingredients += "<li>" + data[0].ingredients[x].quantity + data[0].ingredients[x].name;
         ingredientsToSpeech += data[0].ingredients[x].quantity + data[0].ingredients[x].name + ". ";
     }
+    
     ingredients += "</ul>";
 
     steps += "<ol>";
-    for (x in data[0].steps) {
-        steps += "<li>" + data[0].steps[x];
-        stepsToSpeech += data[0].steps[x];
+    for (x in data[0].instructions) {
+        steps += "<li>" + data[0].instructions[x];
+        stepsToSpeech += data[0].instructions[x];
     }
     steps += "</ol>";
 
     // Show data
     document.getElementById("recipeName").innerHTML = data[0].name;
+    
+    document.getElementById("cooktime").innerHTML = data[0].time;
+    
+    document.getElementById("servings").innerHTML = data[0].servings;
+    
+    document.getElementById("calories").innerHTML = data[0].calories
+    
     loadedRecipe = data[0].name;
     document.getElementById("ingredientsData").innerHTML = ingredients;
     document.getElementById("stepsData").innerHTML = steps;
