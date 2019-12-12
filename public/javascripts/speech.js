@@ -44,6 +44,7 @@ function display(data) {
     ingredients += "<ul>";
     
     for(var i = 0; i < data.length; i++){
+        console.log("clicked recipe is " + clickedRecipe);
         if (data[i].name == clickedRecipe){
             recipeId = i;
         }
