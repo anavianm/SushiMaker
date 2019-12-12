@@ -20,7 +20,7 @@ const registrationRouter = require('./routes/register')
 const resetPassword = require('./routes/reset-password')
 const recipesRoutes = require('./routes/recipes')
 const instructionRoutes = require('./routes/instructions');
-const searchRoutes = require('./routes/search');
+//const searchRoutes = require('./routes/search');
 
 mongoose.connect('mongodb+srv://mchoi06:oof@mchoi06-dvlp7.mongodb.net/Comp20Final?retryWrites=true&w=majority', 
 	{
@@ -100,7 +100,7 @@ app.use('/index', indexRouter)
 app.use('/options', optionRouter);
 app.use('/reset-password', resetPassword)
 app.use('/recipes', recipesRoutes);
-app.use('/search', searchRoutes);
+//app.use('/search', searchRoutes);
 app.use('/instructions', instructionRoutes);
 app.get('/logout', (req, res) => {
   req.logout()
