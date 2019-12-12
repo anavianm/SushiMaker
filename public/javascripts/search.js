@@ -59,15 +59,17 @@ function display(data){
         for(var j = 0; j<data[i].ingredients.length; j++){
 //            console.log('i am repeaed ' + j  + " times")
 //            console.log(data[i].ingredients[j]);
+//              var temp = data[i].ingredients[
+            var temp = data[i].ingredients[j]
         
         $( "#ingredient" ).autocomplete({
           minLength: 0,
-          source: data[i].ingredients,
+          source: temp,
           focus: function( event, ui ) {
               console.log( ui.item.name);
               
             $( "#ingredient" ).val( ui.item.name );
-            return false;
+//            return false;
           },
           select: function( event, ui ) {
             $( "#ingredient" ).val(  ui.item.name);
@@ -85,7 +87,7 @@ function display(data){
         };
         }
         
-        return false;
+//        return true;
     }
     
     //Ingredient 2_______________________________________________: 

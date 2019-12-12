@@ -10,6 +10,7 @@
         margin: 0;
         font-family: Arial;
         font-size: 17px;
+/*        overflow: hidden;   */
       }
 
       .bodyContent{
@@ -27,8 +28,8 @@
       .row1{
 		height: auto;
 		margin-top: 20px;
-		padding-top: 40px;
-		padding: 20px;
+/*		padding-top: 40px;*/
+/*		padding: 20px;*/
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
@@ -37,6 +38,10 @@
 		justify-content: space-between;
 
 	}
+        
+        .recipePic{
+            height: 80%;
+        }
 
 	.card {
 		height: auto;
@@ -47,7 +52,16 @@
 		transition: 0.3s;
 		background: rgba(248, 246, 229 , 0.4 );
     	flex: 0 1 calc(25% - 1em);
+        background-color: #000;
+        color:#fff;
+        text-align:center;
+        
 	}
+        
+        .card p{
+            font-size:20px;
+        font-style: bold;
+        }
 
 	.card:hover {
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.9);
@@ -95,15 +109,17 @@
 	</head>
 	<body>
 
+<!--
 	<video autoplay muted loop id="myVideo">
-      <source src="food.mp4" type="video/mp4">
+      <source src="/images/food.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
+-->
         
-    <p>{{finalResult}}</p>
+<!--    <p>{{finalResult}}</p>-->
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     fetch('./stylesheets/recipeResponse.json') 
 //    fetch('recipe.json') 
     .then(d=>d.json())
@@ -117,35 +133,43 @@
     })
 })
 
-    var divs = "";
-
-	for( var i = 0; i < data.length;++i) {
-
-	  divs += "<div class='card'>"
-				+ "<img id="recipeImg" src="transparent.png" style="width:100%" alt="">"
-				+ "<p id="recipeName"</p>" 
-				+ "</div>";
-	}
-	$("p").append(divs);
+    
+        
 
 	function display(data) {
 	    console.log(data);
-	    document.getElementById("page").style.visibility = 'visible';
+	    //document.getElementById("page").style.visibility = 'visible';
 
 	    // Store data - Name 
-	    ingredients += "<ul>";
+//	    ingredients += "<ul>";
+        
+        var divs = "";
+        
+//        var div document.createElement("div")
+
+	for( var i = 0; i < data.length;++i) {
+
+	  divs += "<div class='card'>"   
+				+ "<img class = 'recipePic' id='recipeImg" + i + "'" + "src='/images/transparent.png' style='width:100%'' alt=''>"
+				+ "<p id='recipeName" + i +"'" +"</p>" 
+				+ '</div>';
+	}
+        
+	$(".row1").append(divs);
 	    
-	    for (var i = 0; i < data.length; i++){ 
+    for (var i = 0; i < data.length; i++){ 
 	 
 
 	    // Show data - Name and Image 
-	    document.getElementById("recipeName").innerHTML = data[0].recipe;
-	    loadedRecipe = data[0].recipe;
-	    document.getElementById("recipeImg").src = data[0].picture;
+	    document.getElementById("recipeName" + i).innerHTML = data[i].recipe;
+	    loadedRecipe = data[i].recipe;
+	    document.getElementById("recipeImg" + i).src = ("/images/" + data[i].picture);
 
 	}
+        
+        
 
-	}
+}
 	
 	</script>
 

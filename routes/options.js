@@ -3,11 +3,13 @@ const router = express.Router()
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const url = require('url');
 const fs = require('fs');
 
 const Recipe = require('../models/recipe');
 
 /* GET home page. */
+
 
 router.get('/', (req, res, next) => {
 	var info1 = req.query.first;
@@ -171,7 +173,7 @@ router.get('/', (req, res, next) => {
     
 console.log(FinalResult);
     
-
+//return res.redirect('/search');
     
 console.log("hello");
 });
@@ -179,7 +181,7 @@ console.log("hello");
 
 
 router.get('/', function (req, res, next) {
-  res.render('options', {
+  res.render('/options', {
     title: 'SushiMaker',
     user: req.user,
   })
