@@ -125,31 +125,6 @@ function display(data) {
             update = recipes.join(", ");
             document.getElementById('likedRecipe').value = update;
         }
-        
-//        if((document.getElementById('heartButton').innerHTML == '<i class="fa fa-heart"></i> Completed') && (recipes.includes(currentrecipe))){
-//            for(var i = 0; i < recipes.length; i ++){
-//                if(recipes[i] == currentrecipe){
-//                    recipes.splice(i,1);
-//                    console.log(recipes);
-//                    currentList = recipes.join();
-//                    document.getElementById('likedRecipe').value = currentList;
-//                    completedText = '<i class="fa fa-heart"></i>' + " Complete";
-//                    document.getElementById('heartButton').style.cssText = 'background-color:#ffffff; color:#000000;';
-//                    document.getElementById("heartButton").innerHTML = completedText;
-//                }
-//            }
-//            
-//        }else if(recipes.includes(currentrecipe)){
-//            document.getElementById('likedRecipe').value = update;
-//            console.log("This is a " + currentrecipe);
-//            completedText = '<i class="fa fa-heart"></i>' + " Completed";
-//            document.getElementById('heartButton').style.cssText = 'background-color:#000000; color:#ffffff;';
-//            document.getElementById("heartButton").innerHTML = completedText;
-//        }else{
-//            console.log("sign in");
-//            $("#heartButton").show();
-//            $("#signInPlease").hide();
-//        }
     }
     
      console.log(document.getElementById("heartButton").innerHTML);
