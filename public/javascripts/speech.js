@@ -9,6 +9,8 @@ var completed = 0;
 var completedText = "";
 var page = "";
 var loadedRecipe;
+var clickedRecipe;
+var recipeId;
 
         
 $(".hidden").hide();
@@ -20,16 +22,17 @@ $("#signInPlease").hide();
 
 
 document.addEventListener("DOMContentLoaded", () => {
-//    fetch('./stylesheets/recipeResponse.json') 
-    fetch('recipe.json') 
-    console.log("hello")
+    fetch('./stylesheets/recipeResponse.json') 
+//    fetch('recipe.json') 
     .then(d=>d.json())
     .then(data=>{
-//        console.log(data);
+        console.log(data);
 
         // Render display 
         display(data);
-    })  
+    }).catch(e => {
+        console.log(e);
+    })
 })
 
 function display(data) {
@@ -39,6 +42,12 @@ function display(data) {
 
     // Store data
     ingredients += "<ul>";
+    
+    for(var i = 0; i < data.length; i++){
+        if (data[i].name == clickedRecipe){
+            recipeId = i;
+        }
+    }
     
     for (x in data[0].ingredients) {
         ingredients += "<li>" + data[0].ingredients[x].quantity + data[0].ingredients[x].name;
@@ -55,18 +64,18 @@ function display(data) {
     steps += "</ol>";
 
     // Show data
-    document.getElementById("recipeName").innerHTML = data[0].name;
+    document.getElementById("recipeName").innerHTML = data[0].recipe;
+//    
+//    document.getElementById("cooktime").innerHTML = data[0].time;
+//    
+//    document.getElementById("servings").innerHTML = data[0].servings;
+//    
+//    document.getElementById("calories").innerHTML = data[0].calories
     
-    document.getElementById("cooktime").innerHTML = data[0].time;
-    
-    document.getElementById("servings").innerHTML = data[0].servings;
-    
-    document.getElementById("calories").innerHTML = data[0].calories
-    
-    loadedRecipe = data[0].name;
+    loadedRecipe = data[0].recipe;
     document.getElementById("ingredientsData").innerHTML = ingredients;
     document.getElementById("stepsData").innerHTML = steps;
-    document.getElementById("recipeImg").src = data[0].imageURL;
+//    document.getElementById("recipeImg").src = data[0].imageURL;
 
     // Create buttons to speech
     document.getElementById("ingredientsToSpeech").setAttribute('data-words', ingredientsToSpeech);
@@ -78,6 +87,7 @@ function display(data) {
     var recipes = currentList.split(", ");
     
     var currentrecipe = loadedRecipe;
+    console.log(currentrecipe);
     
     var update ;
     

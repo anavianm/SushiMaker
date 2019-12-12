@@ -21,8 +21,8 @@ router.get('/', (req, res, next) => {
         Recipe.find({ "ingredient.unmeasured": {$all: [info1, info2, info3] }})
 		.exec()
 		.then(docs => {
-			console.log(docs);
-			fs.writeFile("./public/stylesheets/recipeResponse.json", docs, function(err) {
+			//console.log(docs);
+			fs.writeFile("./public/stylesheets/recipeResponse.json", JSON.stringify(docs), function(err) {
 				if(err) {
         			return console.log(err);
     			}
@@ -43,7 +43,7 @@ router.get('/', (req, res, next) => {
 		.exec()
 		.then(docs => {
 			console.log(docs);
-			fs.writeFile("./public/stylesheets/recipeResponse.json", docs, function(err) {
+			fs.writeFile("./public/stylesheets/recipeResponse.json",JSON.stringify(docs), function(err) {
 				if(err) {
         			return console.log(err);
     			}
@@ -64,7 +64,7 @@ router.get('/', (req, res, next) => {
 		.exec()
 		.then(docs => {
 			console.log(docs);
-			fs.writeFile("./public/stylesheets/recipeResponse.json", docs, function(err) {
+			fs.writeFile("./public/stylesheets/recipeResponse.json", JSON.stringify(docs), function(err) {
 				if(err) {
         			return console.log(err);
     			}
@@ -85,7 +85,7 @@ router.get('/', (req, res, next) => {
 		.exec()
 		.then(docs => {
 			console.log(docs);
-			fs.writeFile("./public/stylesheets/recipeResponse.json", docs, function(err) {
+			fs.writeFile("./public/stylesheets/recipeResponse.json", JSON.stringify(docs), function(err) {
 				if(err) {
         			return console.log(err);
     			}
@@ -106,7 +106,7 @@ router.get('/', (req, res, next) => {
 		.exec()
 		.then(docs => {
 			console.log(docs);
-			fs.writeFile("./public/stylesheets/recipeResponse.json", docs, function(err) {
+			fs.writeFile("./public/stylesheets/recipeResponse.json", JSON.stringify(docs), function(err) {
 				if(err) {
         			return console.log(err);
     			}
@@ -127,7 +127,7 @@ router.get('/', (req, res, next) => {
 		.exec()
 		.then(docs => {
 			console.log(docs);
-			fs.writeFile("./public/stylesheets/recipeResponse.json", docs, function(err) {
+			fs.writeFile("./public/stylesheets/recipeResponse.json", JSON.stringify(docs), function(err) {
 				if(err) {
         			return console.log(err);
     			}
@@ -148,7 +148,7 @@ router.get('/', (req, res, next) => {
 		.exec()
 		.then(docs => {
 			console.log(docs);
-			fs.writeFile("./public/stylesheets/recipeResponse.json", docs, function(err) {
+			fs.writeFile("./public/stylesheets/recipeResponse.json", JSON.stringify(docs), function(err) {
 				if(err) {
         			return console.log(err);
     			}

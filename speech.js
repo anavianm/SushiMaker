@@ -12,7 +12,7 @@ var completedText = "";
 var page = "";
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('recipe.json') 
+    fetch('./stylesheets/recipeResponse.json') 
     .then(d=>d.json())
     .then(data=>{
         console.log(data);
@@ -29,14 +29,13 @@ function display(data) {
     // Store data
     ingredients += "<ul>";
     for (x in data[0].ingredients) {
-        var ingredientName = data[0].ingredients.unmeasured[x];
-        ingredients += "<li>" + ingredientName + data[0].ingredients[x].measured[ingredientName];
-        ingredientsToSpeech += ingredientName + data[0].ingredients[x].measured[ingredientName] + ". ";
+        ingredients += "<li>" + data[0].ingredients[x].quantity + data[0].ingredients[x].name;
+        ingredientsToSpeech += data[0].ingredients[x].quantity + data[0].ingredients[x].name + ". ";
     }
     ingredients += "</ul>";
 
     steps += "<ol>";
-    for (x in data[0].steps) {
+    for (x in data[0].instructions) {
         steps += "<li>" + data[0].instructions[x];
         stepsToSpeech += data[0].instructions[x];
     }
