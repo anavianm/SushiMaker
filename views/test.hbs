@@ -3,7 +3,6 @@
 </head>
 
 
-<!--
 <form method="post">
   {{#each fields}}
     <div>
@@ -19,13 +18,13 @@
       </label>
     </div>
   {{/each}}
-
+<button type="submit">Edit Profile</button>
   
 </form>
--->
 
-<!--<button onclick="post()">Liked</button>-->
 
+
+<!--
 <form method="post">
     <div class="hidden">
         <input id ="likedRecipe" name="likedRecipe" value= "" />
@@ -44,13 +43,14 @@
         <button type="submit">Liked This</button>
     </div>
 </form>
+-->
 
 
 
 
 
 
-<p id="liked">{{user.profile.likedRecipe}}</p>
+<!--<p id="liked">{{user.profile.likedRecipe}}</p>-->
 
 
 
@@ -70,24 +70,24 @@
 
 <script type="text/javascript">
     
-    $(".hidden").hide();
-    
-    var current = document.getElementById('liked').innerHTML;
-    console.log(current);
-    
-    var recipes = current.split(",");
-    
-//    if(recipes.includes("cool")){
-//        
-//    }
-    var update = current + "Tuna Roll" +",";
-//    var update = "";
-    document.getElementById('likedRecipe').value = update;
-    
-    var update1 = current + "Salmon Roll" +",";
-    document.getElementById('likedRecipe1').value = update1;
-
-    console.log(document.getElementById('likedRecipe').value);
+//    $(".hidden").hide();
+//    
+//    var current = document.getElementById('liked').innerHTML;
+//    console.log(current);
+//    
+//    var recipes = current.split(",");
+//    
+////    if(recipes.includes("cool")){
+////        
+////    }
+//    var update = current + "Tuna Roll" +",";
+////    var update = "";
+//    document.getElementById('likedRecipe').value = update;
+//    
+//    var update1 = current + "Salmon Roll" +",";
+//    document.getElementById('likedRecipe1').value = update1;
+//
+//    console.log(document.getElementById('likedRecipe').value);
 
     
 </script>
