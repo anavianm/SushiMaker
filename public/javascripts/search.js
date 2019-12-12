@@ -67,14 +67,14 @@ function display(data){
               console.log( ui.item.name);
               
             $( "#ingredient" ).val( ui.item.name );
-//            return true;
+            return false;
           },
           select: function( event, ui ) {
             $( "#ingredient" ).val(  ui.item.name);
             $( "#ingredient-id" ).val(  ui.item.value);
             $( "#ingredient-icon" ).attr( "src", ui.item.icon);
 
-//            return true;
+//            return false;
           }
         })
         
@@ -85,7 +85,7 @@ function display(data){
         };
         }
         
-//        return false;
+        return false;
     }
     
     //Ingredient 2_______________________________________________: 
