@@ -60,7 +60,7 @@ function display(data){
 //            console.log('i am repeaed ' + j  + " times")
 //            console.log(data[i].ingredients[j]);
 //              var temp = data[i].ingredients[
-            var temp = data[i].ingredients[j]
+            var temp = data[i].ingredients
         
         $( "#ingredient" ).autocomplete({
           minLength: 0,
@@ -74,7 +74,7 @@ function display(data){
           select: function( event, ui ) {
             $( "#ingredient" ).val(  ui.item.name);
             $( "#ingredient-id" ).val(  ui.item.value);
-            $( "#ingredient-icon" ).attr( "src", ui.item.icon);
+            $( "#ingredient-icon" ).attr( "src","./images/IndividualIngredients/" + ui.item.icon);
 
 //            return false;
           }
@@ -85,7 +85,7 @@ function display(data){
             .append( "<div>" + item.name  + "<br>"  + "</div>" )
             .appendTo( ul );
         };
-        }
+    }
         
 //        return true;
     }
@@ -95,57 +95,74 @@ function display(data){
     for(var i = 0; i < data.length; i++){
 //        for(var j in data[i].ingredients){
         for(var j = 0; j<data[i].ingredients.length; j++){
+//            console.log('i am repeaed ' + j  + " times")
+//            console.log(data[i].ingredients[j]);
+//              var temp = data[i].ingredients[
+            var temp = data[i].ingredients
+        
         $( "#ingredient2" ).autocomplete({
           minLength: 0,
-          source: data[i],
+          source: temp,
           focus: function( event, ui ) {
+              console.log( ui.item.name);
+              
             $( "#ingredient2" ).val( ui.item.name );
-            return false;
+//            return false;
           },
           select: function( event, ui ) {
-            $( "#ingredient2" ).val( ui.item.name );
-            $( "#ingredient-id2" ).val( ui.item.value );
-            $( "#ingredient-icon2" ).attr( "src", ui.item.icon );
+            $( "#ingredient2" ).val(  ui.item.name);
+            $( "#ingredient-id2" ).val(  ui.item.value);
+            $( "#ingredient-icon2" ).attr( "src","./images/IndividualIngredients/" + ui.item.icon);
 
-            return false;
+//            return false;
           }
         })
+        
         .autocomplete( "instance" )._renderItem = function( ul, item ) {
           return $( "<li>" )
-            .append( "<div>" + item.name + "<br>" +  "</div>" )
+            .append( "<div>" + item.name  + "<br>"  + "</div>" )
             .appendTo( ul );
         };
-        }
+    }
+        
+//        return true;
     }
 
     //Ingredient 3_______________________________________________: 
-    
-    for(var i = 0; i < data.length; i++){
+        for(var i = 0; i < data.length; i++){
 //        for(var j in data[i].ingredients){
         for(var j = 0; j<data[i].ingredients.length; j++){
-
+//            console.log('i am repeaed ' + j  + " times")
+//            console.log(data[i].ingredients[j]);
+//              var temp = data[i].ingredients[
+            var temp = data[i].ingredients
+        
         $( "#ingredient3" ).autocomplete({
           minLength: 0,
-          source: data[i],
+          source: temp,
           focus: function( event, ui ) {
+              console.log( ui.item.name);
+              
             $( "#ingredient3" ).val( ui.item.name );
-            return false;
+//            return false;
           },
           select: function( event, ui ) {
-            $( "#ingredient3" ).val( ui.item.name );
-            $( "#ingredient-id3" ).val( ui.item.value );
-            $( "#ingredient-icon3" ).attr( "src", ui.item.icon );
+            $( "#ingredient3" ).val(  ui.item.name);
+            $( "#ingredient-id3" ).val(  ui.item.value);
+            $( "#ingredient-icon3" ).attr( "src","./images/IndividualIngredients/" + ui.item.icon);
 
-            return false;
+//            return false;
           }
         })
+        
         .autocomplete( "instance" )._renderItem = function( ul, item ) {
           return $( "<li>" )
-            .append( "<div>" + item.name + "<br>" +  "</div>" )
+            .append( "<div>" + item.name  + "<br>"  + "</div>" )
             .appendTo( ul );
         };
-            
-        }
+    }
+        
+//        return true;
     }
    
     
